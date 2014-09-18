@@ -7,7 +7,7 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple App.
+ * Unit test for Connection pool
  */
 public class AppTest extends TestCase {
 	/**
@@ -33,7 +33,7 @@ public class AppTest extends TestCase {
 	public void testApp() {
 		ConnectionPool pool = null;
         try {
-			pool = new ConnectionPool("jdbc:mysql://192.168.20.53:3306/jkrescue","arun","inapp", "com.mysql.jdbc.Driver");
+			pool = new ConnectionPool("jdbc:mysql://hostname:port/dbname","username","password", "com.mysql.jdbc.Driver");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
