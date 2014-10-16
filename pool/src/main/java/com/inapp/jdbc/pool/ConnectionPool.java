@@ -97,7 +97,7 @@ public class ConnectionPool implements Runnable {
 	private void loadDriver(String driver) {
 		try {
 			System.out.println("Loading Driver");
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName(driver).newInstance();
 			driverLoaded = true;
 		} catch (Exception e) {
 			System.err.println("Exception while loading driver");
